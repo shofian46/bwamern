@@ -2,7 +2,8 @@ import React, { Component } from "react";
 // import { connect } from "react-redux";
 
 import Header from "parts/Header";
-// import Hero from "parts/Hero";
+import Hero from "parts/Hero";
+import HomePage from "json/landingPage.json";
 // import MostPicked from "parts/MostPicked";
 // import Categories from "parts/Categories";
 // import Testimony from "parts/Testimony";
@@ -27,11 +28,12 @@ class LandingPage extends Component {
     const { page } = this.props;
 
     // if (!page.hasOwnProperty("landingPage")) return null;
+    console.log(this.props);
 
     return (
       <>
         <Header {...this.props}></Header>
-        {/* <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero} /> */}
+        <Hero data={HomePage.hero} />
         {/* <MostPicked
           refMostPicked={this.refMostPicked}
           data={page.landingPage.mostPicked}
