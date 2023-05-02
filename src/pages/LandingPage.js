@@ -16,13 +16,13 @@ class LandingPage extends Component {
     this.refMostPicked = React.createRef();
   }
 
-  // componentDidMount() {
-  //   document.title = "Staycation | Home";
-  //   window.scrollTo(0, 0);
+  componentDidMount() {
+    document.title = "Staycation | Home";
+    window.scrollTo(0, 0);
 
-  //   if (!this.props.page.landingPage)
-  //     this.props.fetchPage(`/landing-page`, "landingPage");
-  // }
+    // if (!this.props.page.landingPage)
+    //   this.props.fetchPage(`/landing-page`, "landingPage");
+  }
 
   render() {
     const { page } = this.props;

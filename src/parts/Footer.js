@@ -62,18 +62,18 @@ export default function Footer() {
                     <Button
                       isExternal
                       type="link"
-                      href="mailto:support@staycation.id"
+                      href="mailto:shofianal28@gmail.com"
                     >
-                      support@staycation.id
+                      support@yogyacation.id
                     </Button>
                   </li>
                   <li className="list-group-item">
                     <Button isExternal type="link" href="tel:+622122081996">
-                      021 - 2208 - 1996
+                      0855 - 9146 - 7429
                     </Button>
                   </li>
                   <li className="list-group-item">
-                    <span>Staycation, Kemang, Jakarta</span>
+                    <span>Yogyacation, Gunung kidul, Yogyakarta</span>
                   </li>
                 </ul>
               </div>
