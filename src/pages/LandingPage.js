@@ -5,7 +5,7 @@ import Header from "parts/Header";
 import Hero from "parts/Hero";
 import HomePage from "json/landingPage.json";
 import MostPicked from "parts/MostPicked";
-// import Categories from "parts/Categories";
+import Categories from "parts/Categories";
 // import Testimony from "parts/Testimony";
 // import Footer from "parts/Footer";
 
@@ -38,7 +38,7 @@ class LandingPage extends Component {
           refMostPicked={this.refMostPicked}
           data={HomePage.mostPicked}
         />
-        {/* <Categories data={page.landingPage.category} /> */}
+        <Categories data={HomePage.category} />
         {/* <Testimony data={page.landingPage.testimonial} /> */}
         {/* <Footer /> */}
       </>
