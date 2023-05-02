@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import Header from "parts/Header";
 import Hero from "parts/Hero";
 import HomePage from "json/landingPage.json";
-// import MostPicked from "parts/MostPicked";
+import MostPicked from "parts/MostPicked";
 // import Categories from "parts/Categories";
 // import Testimony from "parts/Testimony";
 // import Footer from "parts/Footer";
@@ -33,11 +33,11 @@ class LandingPage extends Component {
     return (
       <>
         <Header {...this.props}></Header>
-        <Hero data={HomePage.hero} />
-        {/* <MostPicked
+        <Hero refMostPicked={this.refMostPicked} data={HomePage.hero} />
+        <MostPicked
           refMostPicked={this.refMostPicked}
-          data={page.landingPage.mostPicked}
-        /> */}
+          data={HomePage.mostPicked}
+        />
         {/* <Categories data={page.landingPage.category} /> */}
         {/* <Testimony data={page.landingPage.testimonial} /> */}
         {/* <Footer /> */}
