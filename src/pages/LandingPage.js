@@ -6,8 +6,8 @@ import Hero from "parts/Hero";
 import HomePage from "json/landingPage.json";
 import MostPicked from "parts/MostPicked";
 import Categories from "parts/Categories";
-// import Testimony from "parts/Testimony";
-// import Footer from "parts/Footer";
+import Testimony from "parts/Testimony";
+import Footer from "parts/Footer";
 
 // import { fetchPage } from "store/actions/page";
 class LandingPage extends Component {
@@ -39,8 +39,8 @@ class LandingPage extends Component {
           data={HomePage.mostPicked}
         />
         <Categories data={HomePage.category} />
-        {/* <Testimony data={page.landingPage.testimonial} /> */}
-        {/* <Footer /> */}
+        <Testimony data={HomePage.testimonial} />
+        <Footer />
       </>
     );
   }
