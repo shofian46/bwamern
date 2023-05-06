@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import { screen } from "@testing-library/jest-dom";
+import { screen } from "react-dom/test-utils";
 import InputDate from "./index";
 
 class TestInput extends React.Component {
