@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import Header from "parts/Header";
 import Hero from "parts/Hero";
-import HomePage from "json/landingPage.json";
+import homePage from "json/landingPage.json";
 import MostPicked from "parts/MostPicked";
 import Categories from "parts/Categories";
 import Testimony from "parts/Testimony";
@@ -20,34 +20,34 @@ class LandingPage extends Component {
     document.title = "Staycation | Home";
     window.scrollTo(0, 0);
 
-    // if (!this.props.page.landingPage)
-    //   this.props.fetchPage(`/landing-page`, "landingPage");
+    // if (!this.props.page.homePage)
+    //     this.props.fetchPage(`/landing-page`, "homePage");
   }
 
   render() {
     const { page } = this.props;
 
     // if (!page.hasOwnProperty("landingPage")) return null;
-    console.log(this.props);
+    // console.log(this.props);
 
     return (
       <>
         <Header {...this.props}></Header>
-        <Hero refMostPicked={this.refMostPicked} data={HomePage.hero} />
+        <Hero refMostPicked={this.refMostPicked} data={homePage.hero} />
         <MostPicked
           refMostPicked={this.refMostPicked}
-          data={HomePage.mostPicked}
+          data={homePage.mostPicked}
         />
-        <Categories data={HomePage.category} />
-        <Testimony data={HomePage.testimonial} />
+        <Categories data={homePage.category} />
+        <Testimony data={homePage.testimonial} />
         <Footer />
       </>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-  page: state.page,
-});
+// const mapStateToProps = (state) => ({
+//   page: state.page,
+// });
 
 export default (LandingPage);
