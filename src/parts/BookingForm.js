@@ -110,7 +110,7 @@ class BookingForm extends Component {
           style={{ marginBottom: 40 }}
         >
           You will pay{" "}
-          <span className="text-gray-900 font-weight-bold">
+          <span className="text-indigo font-weight-bold">
             Rp.{itemDetails.price * data.duration}K IDR
           </span>{" "}
           /{" "}
