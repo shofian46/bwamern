@@ -13,6 +13,7 @@ class TestInput extends React.Component {
 
   render() {
     return (
+
       <InputNumber
         max={30}
         onChange={this.handleChange}

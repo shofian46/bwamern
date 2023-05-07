@@ -12,6 +12,9 @@
 .breadcrumb-item {
   a {
     color: $gray-400;
+    &:hover {
+      text-decoration: none;
+    }
   }
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {

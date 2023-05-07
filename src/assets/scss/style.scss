@@ -144,6 +144,9 @@ section {
     span {
       font-size: 0.875rem;
     }
+    & a:hover {
+      text-decoration: none;
+    }
   }
 
   &.card-featured {

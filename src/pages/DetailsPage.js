@@ -6,11 +6,11 @@ import Header from "parts/Header";
 import PageDetailTitle from "parts/PageDetailTitle";
 import FeaturedImage from "parts/FeaturedImage";
 import PageDetailDescription from "parts/PageDetailDescription";
-// import BookingForm from "parts/BookingForm";
+import BookingForm from "parts/BookingForm";
 // import Activities from "parts/Activities";
-import ItemDetails from 'json/itemDetails';
+import itemDetails from 'json/itemDetails';
 // import Testimony from "parts/Testimony";
-// import Footer from "parts/Footer";
+import Footer from "parts/Footer";
 
 // import { checkoutBooking } from "store/actions/checkout";
 // import { fetchPage } from "store/actions/page";
@@ -31,18 +31,19 @@ class DetailsPage extends Component {
     return (
       <>
         <Header {...this.props} />
-        <PageDetailTitle breadcrumb={breadcrumb} data={ItemDetails} />
-        <FeaturedImage data={ItemDetails.imageUrls} />
+        <PageDetailTitle breadcrumb={breadcrumb} data={itemDetails} />
+        <FeaturedImage data={itemDetails.imageUrls} />
         <section className="container">
           <div className="row">
             <div className="col-7 pr-5">
-              <PageDetailDescription data={ItemDetails} />
+              <PageDetailDescription data={itemDetails} />
             </div>
             <div className="col-5">
-              Booking Form
+              <BookingForm itemDetails={itemDetails}></BookingForm>
             </div>
           </div>
         </section>
+        <Footer />
       </>
     );
   }
