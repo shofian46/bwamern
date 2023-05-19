@@ -43,7 +43,10 @@ class DetailsPage extends Component {
             </div>
             <div className="col-5">
               <Fade bottom>
-                <BookingForm itemDetails={itemDetails} />
+                <BookingForm
+                  itemDetails={itemDetails}
+                  startBooking={this.props.checkoutBooking}
+                />
               </Fade>
             </div>
           </div>

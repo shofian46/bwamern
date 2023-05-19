@@ -4,10 +4,10 @@ import { withRouter } from "react-router-dom";
 import propTypes from "prop-types";
 
 import Button from "elements/Button";
-import Footer from "./Footer";
 import { InputNumber, InputDate } from "elements/Form";
 
 class BookingForm extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -66,17 +66,9 @@ class BookingForm extends Component {
   }
 
   startBooking = () => {
-    const { data } = this.state;
-    this.props.startBooking({
-      _id: this.props.itemDetails._id,
-      duration: data.duration,
-      date: {
-        startDate: data.date.startDate,
-        endDate: data.date.endDate,
-      },
-    });
     this.props.history.push("/checkout");
   };
+
 
   render() {
     const { data } = this.state;
@@ -85,12 +77,12 @@ class BookingForm extends Component {
     return (
       <div className="card bordered" style={{ padding: "60px 80px" }}>
         <h4 className="mb-3">Start Booking</h4>
-        <h6 className="h4 text-teal mb-4">
-          Rp.{itemDetails.price}K{" "}
+        <h5 className="h2 text-teal mb-4">
+          Rp{itemDetails.price}K{" "}
           <span className="text-gray-500 font-weight-light">
             / {itemDetails.unit}
           </span>
-        </h6>
+        </h5>
 
         <label htmlFor="duration">How long you will stay?</label>
         <InputNumber
@@ -105,22 +97,22 @@ class BookingForm extends Component {
         <label htmlFor="date">Pick a date</label>
         <InputDate onChange={this.updateData} name="date" value={data.date} />
 
-        <small
-          className="h6 text-gray-500 font-weight-light"
+        <h6
+          className="text-gray-500 font-weight-light"
           style={{ marginBottom: 40 }}
         >
           You will pay{" "}
           <span className="text-indigo font-weight-bold">
-            Rp.{itemDetails.price * data.duration}K IDR
+            Rp{itemDetails.price * data.duration} IDR
           </span>{" "}
           /{" "}
           <span className="text-gray-900">
             {data.duration} {itemDetails.unit}
           </span>
-        </small>
+        </h6>
 
         <Button
-          className="btn"
+          className="btn mb-3"
           hasShadow
           isPrimary
           isBlock
@@ -128,8 +120,16 @@ class BookingForm extends Component {
         >
           Continue to Book
         </Button>
+        <Button
+          className="btn"
+          type="link"
+          isBlock
+          isLight
+          href=""
+        >
+          Cancel
+        </Button>
       </div>
-
     );
   }
 }
